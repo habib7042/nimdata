@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students List</title>
+  </head>
+  <body>
+    <h1>Students List</h1>
+    <ul>
+      {%for x in data%}
+      <li><a href="/students/{{x.id}}">{{x.roll}}. {{x.name}}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
