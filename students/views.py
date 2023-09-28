@@ -12,3 +12,6 @@ def students(request):
 def result(request,id):
     data = Student.objects.get(id=id)
     return render(request, 'result.html', {"data": data})
+
+def test(request):
+    return render(request, 'test.html', {})

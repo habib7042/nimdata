@@ -1,23 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} {{data.name}}' Result {% endblock %}</title>
-  </head>
-  <body>
-    <h1>{{data.name}}' Result</h1>
-    <p>Aquid and Fiqh: {{data.aqaid_f}}</p>
-    <p>Qurna: {{data.quran_t}}</p>
-    <p>Arabic 1st: {{data.arabic1}}</p>
-    <p>Arabic 2st: {{data.arabic2}}</p>
-    <p>Bangla: {{data.bangla}}</p>
-    <p>English: {{data.english}}</p>
-    <p>Mathematics: {{data.math}}</p>
-    <p>Science: {{data.gen_science}}</p>
-    <p>Bangladesh and World: {{data.b_world}}</p>
-    <p>ICT: {{data.ict}}</p>
-    <p>GPA: {{data.gpa}}</p>
-    <p>Grade: {{data.gread}}</p>
-  </body>
-</html>
+{% extends 'base.html' %}
+<head>
+  {% block title %} {{data.name}}' Result {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <h1>{{data.name}}' Result</h1>
+  <table border="1">
+    <tr>
+      <th>Aquid and Fiqh</th>
+      <th>Quran</th>
+      <th>Arabic 1st</th>
+      <th>Arabic 2nd</th>
+      <th>Bangla</th>
+      <th>English</th>
+      <th>Mathematics</th>
+      <th>Science</th>
+      <th>Bangladesh and Word</th>
+      <th>ICT</th>
+      <th>Total GPA</th>
+      <th>Grade</th>
+    </tr>
+    <tr>
+      <td>{{data.aqaid_f}}</td>
+      <td>{{data.quran_t}}</td>
+      <td>{{data.arabic1}}</td>
+      <td>{{data.arabic2}}</td>
+      <td>{{data.bangla}}</td>
+      <td>{{data.english}}</td>
+      <td>{{data.math}}</td>
+      <td>{{data.gen_science}}</td>
+      <td>{{data.b_world}}</td>
+      <td>{{data.ict}}</td>
+      <td>{{data.gpa}}</td>
+      <td>{{data.gread}}</td>
+    </tr>
+  </table>
+
+  {% endblock %}
+</body>
